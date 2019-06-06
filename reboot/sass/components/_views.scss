@@ -1,0 +1,221 @@
+.view-layout-custom {
+    display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 30px;
+  .view-layout-custom-item {
+    // background:grey;
+    position:relative;
+    &:hover {
+      .contextual-editing {
+        display:block;
+      }
+    }
+  }
+  .contextual-editing {
+    position:absolute;
+    top:0;
+    right:0;
+    width:10em;
+    a {
+      text-decoration:none;
+    }
+    // font-size:.8125em;
+    // color:$claro;
+    display:none;
+  }
+  .view-main-content {
+  grid-column:span 3;
+    
+
+    }
+  .view-second-content {}
+  background:url(../images/icons/states-approved.svg) no-repeat;
+  background-size:42px;
+  background-position:top right;
+  &.status-False {
+    background-image:url(../images/icons/states-draft.svg);
+  }
+}
+
+body.path-group {
+  
+}
+
+
+.view-solution-group-pages {
+  .views-field-nothing {
+    // opacity:.1;
+    // display:none;
+  }
+  .view-content {
+    position:relative;
+  }
+  
+  .approved-True  {
+    // background:cyan;
+  }
+  .field__label {
+    // flex-basis:12em;
+    // text-align:right;
+    // margin-right:15px;
+
+  }
+  // .field--label-above
+  
+  p {
+        margin:0;
+        // background:red;
+  }
+  p + p {
+          margin:1.5em 0;
+  }
+}
+
+
+.view.view-flip-card {
+  .svg-icon {
+    max-width:100%;
+    height:auto;
+    
+  }
+   h4 {
+    // background:transparentize($bk_1,.2);
+    // background:$bk_1;
+    // color:white;
+    border:1px solid $bk_1;
+    background:white;
+    color:$bk_1;
+    margin:0;
+    padding:5px 5px;
+    position:absolute;
+    bottom:0px;
+    left:0;
+    width:100%;
+   }
+  .flip-card {
+    background-color: transparent;
+    // width: 300px;
+    // border:4px solid $bk_1;
+    height: 252px;
+   
+    color:white;
+    // overflow:hidden;
+    // border: 1px solid #f1f1f1;
+    // perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    background-color:$gris_98;
+    // border:2px solid $bk_1;
+    // border-radius:20px 20px 0 0;
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color:$bk_1;
+    color: white;
+    padding:0 1em;
+    transform: rotateY(180deg);
+    p {
+      position:absolute;
+      top:1.5em;
+      left:0;
+      padding:1em;
+    }
+  }
+
+
+}
+
+
+.view.view-flip-card-perspective {
+  .flip-card {
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
+}
+.view-cols-3,
+.view.front-banner
+ {
+  .view-content {
+  // background:red;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); 
+    grid-gap: 30px;
+
+  }
+  .views-row {
+    position:relative;
+    // background:red;
+  }
+  &.view-display-id-block_4 .view-content {
+  
+    display:block;
+    width:480px;
+    // background:rsed;
+    margin:0 auto;
+  }
+  
+}
+.view-front-solutions {
+  .views-field-body {
+    // color:$claro;
+    font-size:.875em;
+  }
+}
+
+.view-group-content,
+.view-custom-group {
+
+  
+  
+  .item-list {
+    ul {
+      @include reset-list();
+      li:not(:last-of-type) {
+        
+        a {
+          
+          border-bottom:1px solid $gris_80;
+        }
+        
+      }
+      li a {
+        padding:5px 5px;
+        background:$gris_95;
+        display:block;
+        
+      }
+      
+    }
+    
+    
+  }
+}

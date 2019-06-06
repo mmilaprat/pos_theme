@@ -1,0 +1,9 @@
+#block-reboot-main-menu {
+  & > .menu > li > a {
+  }
+  .menu a:hover {
+    background:$bk_1;
+    color:white;
+   
+  }
+}

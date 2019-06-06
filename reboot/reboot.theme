@@ -1,0 +1,161 @@
+<?php
+/**
+ * @file
+ * Contains the theme's functions to manipulate Drupal's default markup.
+ *
+ * Complete documentation for this file is available online.
+ * @see https://drupal.org/node/1728096
+ */
+
+
+/**
+ * Override or insert variables into the maintenance page template.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("maintenance_page" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function reboot_preprocess_maintenance_page(&$variables, $hook) {
+  // When a variable is manipulated or added in preprocess_html or
+  // preprocess_page, that same work is probably needed for the maintenance page
+  // as well, so we can just re-use those functions to do that work here.
+  reboot_preprocess_html($variables, $hook);
+  reboot_preprocess_page($variables, $hook);
+}
+// */
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+
+function reboot_preprocess_html(&$variables) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+  // kint($variables['page']['sidebar_first']);
+  // kint($variables['attributes']['class']);
+  // $node = menu_get_object();
+   // $node = menu_get_item();
+   // $node_id = \Drupal::request()->attributes->get('node');
+   // $node = node_load($node_id);
+
+  // kint($node);
+  if (isset($variables['page']['sidebar_first'])){
+    $variables['attributes']['class'][] = 'body-sidebar-first';
+  }
+  if (isset($variables['page']['sidebar_second'])){
+    $variables['attributes']['class'][] = 'body-sidebar-second';
+  }
+  if (isset($variables['page']['sidebar_second']) && isset($variables['page']['sidebar_first'] )){
+    $variables['attributes']['class'][] = 'body-two-sidebars';
+  }
+   
+  // $variables['sample_variable'] = implode('-',variables['attributes']['class']); 
+  // $variables['sample_variable'] = implode('-',$variables['attributes']['class']); 
+  // $variables['sample_variable'] = print_r($variables['attributes']['class']); 
+  
+  
+}
+// */
+
+/**
+ * Override or insert variables into the page templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("page" in this case.)
+ */
+
+function reboot_preprocess_page(&$variables) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+  
+  // if (empty($variables['main_menu'])) {
+    
+    // $variables['main_menu']['#attributes']['id'] = 'main-menu-links';
+    // $variables['main_menu']['#attributes']['class'] = array('links', 'clearfix', 'MYNEW_class');
+  // }
+}
+// */
+
+/**
+ * Override or insert variables into the region templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("region" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function reboot_preprocess_region(&$variables, $hook) {
+  // Don't use Zen's region--no-wrapper.tpl.php template for sidebars.
+  if (strpos($variables['region'], 'sidebar_') === 0) {
+    $variables['theme_hook_suggestions'] = array_diff(
+      $variables['theme_hook_suggestions'], array('region__no_wrapper')
+    );
+  }
+}
+// */
+
+/**
+ * Override or insert variables into the block templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("block" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function reboot_preprocess_block(&$variables, $hook) {
+  // Add a count to all the blocks in the region.
+  // $variables['classes_array'][] = 'count-' . $variables['block_id'];
+
+  // By default, Zen will use the block--no-wrapper.tpl.php for the main
+  // content. This optional bit of code undoes that:
+  if ($variables['block_html_id'] == 'block-system-main') {
+    $variables['theme_hook_suggestions'] = array_diff(
+      $variables['theme_hook_suggestions'], array('block__no_wrapper')
+    );
+  }
+}
+// */
+
+/**
+ * Override or insert variables into the node templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("node" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function reboot_preprocess_node(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+
+  // Optionally, run node-type-specific preprocess functions, like
+  // reboot_preprocess_node_page() or reboot_preprocess_node_story().
+  $function = __FUNCTION__ . '_' . $variables['node']->type;
+  if (function_exists($function)) {
+    $function($variables, $hook);
+  }
+}
+// */
+
+/**
+ * Override or insert variables into the comment templates.
+ *
+ * @param array $variables
+ *   Variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("comment" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function reboot_preprocess_comment(&$variables, $hook) {
+  $variables['sample_variable'] = t('Lorem ipsum.');
+}
+// */

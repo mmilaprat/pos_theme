@@ -1,0 +1,15 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog.ajax
+    
+print-styling:
+  css:
+    theme:
+      css/print-style.css: {}
