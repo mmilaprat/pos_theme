@@ -26,6 +26,7 @@
   }
   .form--inline {
     display:flex;
+    flex-wrap: wrap;
   }
   
   .form-item-search-api-fulltext {

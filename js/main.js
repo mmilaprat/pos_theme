@@ -4,6 +4,29 @@
     attach: function(context, settings) {
         // var $body = $('#block-trialobjectivesinstructions');
         // $($body).hide();
+
+        // $('#region-help').hide();
+        
+        $('#nav-toggle', context).css("cursor","pointer").click(function() {
+          $(this).toggleClass('active');
+          $('#block-reboot-main-menu').toggleClass('active');
+         
+         
+        });
+
+        // $( "#nav-toggle", context ).css("cursor","pointer").on( "click", function() {
+        //   // $( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
+        //   $(this).toggleClass('active');
+        //   $('#block-reboot-main-menu').toggleClass('active');
+
+
+          
+          
+         
+          
+        // });
+       
+
         $('#region-help').hide();
         
       $('#btn-help, #user-menu .help', context).css("cursor","pointer").click(function() {

@@ -108,6 +108,7 @@
   // font-size:.875em;
   font-size:14px;
   display:flex;
+  flex-wrap:wrap;
   li {
     margin:0;
     &:first-of-type {
