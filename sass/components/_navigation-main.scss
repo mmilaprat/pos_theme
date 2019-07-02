@@ -25,17 +25,16 @@
 
 @media(max-width:$device - 1) {
 
-
   #block-reboot-main-menu {
-    // display:none;
+
     opacity:0;
     
     overflow:hidden;
     margin:0;
     position:fixed;
-    z-index:2;
+    z-index:999;
     background:white; 
-    // background:red; 
+
     width:100%;
     border:2px solid $gris_80;
     padding:1.5em;
@@ -45,7 +44,7 @@
     width:1px;
     margin-left:-200px;
     &.active {
-      // display:block;
+
       opacity:1;
       
       margin:0 -1em;

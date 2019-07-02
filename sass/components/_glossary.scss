@@ -1,0 +1,21 @@
+body.js-off-canvas-dialog-open {
+    // background:red;
+    header {
+        // background:cyan;
+    }
+    .dialog-off-canvas-main-canvas {
+        padding-right:200px !important;
+    }
+}
+
+.ui-widget.ui-widget-content.ui-corner-all {
+    width:80% !important;
+}
+
+@media(min-width:$device_max) {
+    .ui-widget.ui-widget-content.ui-corner-all {
+        width:50% !important;;
+    }
+}
+
+// ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-off-canvas ui-dialog-position-side ui-resizable

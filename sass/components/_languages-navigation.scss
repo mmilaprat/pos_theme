@@ -65,7 +65,17 @@ ul.links-translations span.es:before {
 .ui-dialog-content .diff-controls,
 .displayDifferences .dialog-off-canvas-main-canvas #block-reboot-content .diff-controls
 {
-  display: none;
+    display: none;
+}
+
+.dialog-off-canvas-main-canvas .ajax-links-api-content .diff-header,
+.dialog-off-canvas-main-canvas .ajax-links-api-content .diff-controls {
+    display: none;  
+}
+
+.dialog-off-canvas-main-canvas .ajax-links-api-content .diff-responsive-table-wrapper {
+  border: 1px solid #333333;
+  background: #ffffff;
 }
 
 .ui-dialog-content #btndifferences {
