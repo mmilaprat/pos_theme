@@ -158,4 +158,28 @@ function reboot_preprocess_node(&$variables, $hook) {
 function reboot_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
+
+
+
 // */
+
+function  reboot_preprocess_field(&$variables) {
+  $element = $variables['element'];
+  $type = $element['#field_type'];
+  
+  $name = $element['#field_name'];
+ 
+  
+  $variables['lorem'] =  NULL;
+/*
+ if ($type == boolean) {
+  //  print($name);
+   if($name == 'field_check_objective_5') {
+    // print_r($element);
+   }
+  
+  
+ }
+*/
+  
+}

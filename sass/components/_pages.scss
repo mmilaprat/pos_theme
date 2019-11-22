@@ -19,11 +19,11 @@
   // display:none;
 }
 @media (min-width:$device) {
-  header {
+  #header {
     max-width:$device;
     margin:0 auto;
     padding:2em 0 1em;
-    // background:$gris_90;
+    // background:red;
     
     display: grid;
     grid-template-columns: repeat(12, 1fr);

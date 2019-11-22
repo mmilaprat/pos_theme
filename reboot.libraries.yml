@@ -4,6 +4,7 @@ global-styling:
       css/style.css: {}
   js:
     js/main.js: {}
+    js/reload_h5p.js: {}
   dependencies:
     - core/jquery
     - core/drupal

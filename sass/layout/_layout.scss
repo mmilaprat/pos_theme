@@ -90,6 +90,7 @@ main {
     main {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: 210px 1fr;
       grid-gap: 30px;
       
     // background:$gris_80;
@@ -99,18 +100,18 @@ main {
     
     }
     .layout-content {
-       grid-column: 5 / span 8;
+      //  grid-column: 5 / span 8;
 
     }
     .layout-sidebar-first {
      order: -1;
-        grid-column:span 2 ;
+        // grid-column:span 2 ;
 
     }
     
     &.path-group {
      .layout-content {
-       grid-column: 3 / span 11;
+      //  grid-column: 3 / span 11;
 
       }
     }
@@ -126,7 +127,7 @@ main {
       // padding-left:30px;
     }
     .layout-content {
-       grid-column: span 10;
+      //  grid-column: span 10;
 
     }
   

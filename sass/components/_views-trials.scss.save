@@ -235,35 +235,33 @@ aside.layout-sidebar-first {
         overflow:visible;
         // text-align:right;
         // width:auto;
-        padding-left:2.5em;
-        text-indent:0;
-        // padding:0em;
-        // display:block;
-        // background:red;
-        
-      }
-    }
-  }
-  
-}
-// .view-list-of-trials,
-.view-target-market {
-
-		.view-content {
-			@media all and (min-width:$device_7) {
-				// @include flex();
+        padding-left:2.5em; iew-title2 { text-indent:0;
+        z-index: 50; // padding:0em;
+        position: absolute; // display:block;
+        font-size: 0.81em; // background:red;
+        top: 5px;
+        left: 30px; }
+        background: white; }
+        color: #858585; }
+        border: 1px solid #cccccc;
+        border-radius: 7px;} // .view-list-of-trials, .view-target-market {
+        padding: 10px;
+        box-shadow:2px 2px 6px rgba(51,51,51,0.1); .view-content {
+        height:15%; @media all and (min-width:$device_7) {
+  }				// @include flex();
 			}
 			
 			max-width:1920px;
-			margin:0 auto;
-			
-			.views-row {
-				height:300px;
-				@media all and (min-width:$device) {
-					
-				}
+  .view-title2 a { margin:0 auto;
+        color: white;
+        text-decoration: none; .views-row {
+        font-size: .8125em; height:300px;
+        text-transform: uppercase; @media all and (min-width:$device) {
+        letter-spacing: 2px;
+  }				}
 				
 				@media all and (min-width:$device_max) {
+:
 					width:25%;
 					height:350px;
 					// &:nth-child(4),

@@ -25,6 +25,12 @@ body.path-frontpage {
     background-size:contain;
     
   }
+  .content {
+    max-width:$device;
+    margin:0 auto;
+    // text-align:center;
+  }
+  
 }
 
 #block-views-block-front-page-views-front-knowledge-block {
@@ -32,11 +38,6 @@ body.path-frontpage {
 
 }
 
-.content {
-  max-width:$device;
-  margin:0 auto;
-  text-align:center;
-}
 
 body.path-frontpage {
   .row:nth-child(even) {

@@ -47,43 +47,62 @@
       // font-size:.875em;
       font-size:.9375em;
       @include nav-btn();
-      
+      padding:7px;
+      color:$bk;
+      border-color:$bk_3_1;
       font-weight:600;
       background:white;
       display:block;
       &.active {
         background:$gris_20;
         background:linear-gradient(to bottom, $bk_1, $bk);
+        background:$bk;
         color:white;
         border-color:black;
       }
       &.passed {
         background:linear-gradient(to bottom, $bk_2, $bk_2_1);
+        border-color:$bk;
+        background:$bk_2;
       }
       &:hover {
         background:$bk;
         color:white;
       }
+      $size:35px;
+      padding-left:$size + 8;
+      position:relative;
       &:before {
-        content:"\ea56";
+        content:"\e911";
+        font-size:$size;
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:$size;
+        height:$size;
+        display:block;
+        // background:white;
+
+
+
       }
       &.trial-gaps:before {
-        content:"\e9bb";
+        content:"\e911";
       }
       &.trial-objectives:before {
-        content:"\e9cc";
+        content:"\e912";
       }
       &.trial-questions:before {
-        content:"\ea09";
+        content:"\e913";
       }
       &.trial-evaluation:before {
-        content:"\e9b8";
+        content:"\e90a";
       }
       &.trial-scenario:before {
-        content:"\e9c9";
+        content:"\e914";
       }
       &.trial-solution:before {
-        content:"\e907";
+        content:"\e915";
       }
       &.trial-test:before {
         content:"\e901";
@@ -95,14 +114,54 @@
         content:"\e905";
       }
       &.trial-analysis:before {
-        content:"\e99c";
+        content:"\e910";
       }
      &.trial-execution:before {
-        content:"\f013";
+        content:"\e916";
       }
       &.trial-evaluation-phase:before {
         content:"\ea10";
       }
+      &.trial-dry-one:before {
+        
+        content:"\e90e";
+        content:"\e919";
+        
+      }
+      &.trial-dry-two:before {
+        
+        content:"\e90f";
+        content:"\e91a";
+        
+      }
+      &.trial-run:before {
+        
+        content:"\e917";
+        content:"\e91b";
+      }
+      &.trial-data-quality:before {
+        
+        content:"\e90b";
+      }
+      &.trial-data-analysis:before {
+        
+        content:"\e909";
+      }
+      &.trial-data-synthesis:before {
+        
+        content:"\e90c";
+      }
+      &.trial-dissemination:before {
+        
+        content:"\e90d";
+      }
+      &.trial-lessons:before {
+        
+        content:"\e918";
+      }
+        
+        
+      
     }
     
     
@@ -125,11 +184,20 @@
   .views-field a,
   .menu a {
      @include nav-btn();
+
+
+     
    display:block;
     &.active {
       background:black;
       color:white;
       border-color:black;
+
+    }
+    &.passed {
+      
+      // border-color:black;
+
     }
   }
 }
@@ -210,5 +278,6 @@
     }
   }
 }
+
 
 

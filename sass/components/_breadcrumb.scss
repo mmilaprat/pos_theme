@@ -1,7 +1,14 @@
 #block-reboot-breadcrumbs{
     background:$bk_2;
     background:$gris_95;
+    background:transparentize($bk_1,.5);
+    // background:$bk_1;
     color:$general;
+    margin-top:-29px;
+    color:white;
+    // opacity:.72;
+
+    
     a {
         text-decoration:none;
         display:inline-block;
@@ -10,6 +17,9 @@
         padding:5px;
         font-size:.875em;
         text-transform:uppercase;
+        color:white;
+        color:$bk_2_2;
+        color:white;
         // font-style:italic;
     }
     ol {
@@ -21,4 +31,17 @@
 
 .breadcrumb {
     padding:0;
+}
+
+body.path-group , body.path-gt  {
+    #block-reboot-breadcrumbs{
+        background:transparentize(#c17528,.5);
+        // background:#c17528;
+        color:#f0d6a6;
+        a {
+            color:#f0d6a6;
+        }
+    }
+    
+
 }

@@ -1,15 +1,14 @@
 body.js-off-canvas-dialog-open {
-    // background:red;
-    header {
-        // background:cyan;
-    }
+   
+   
     .dialog-off-canvas-main-canvas {
-        padding-right:200px !important;
+   
     }
+   
 }
 
 .ui-widget.ui-widget-content.ui-corner-all {
-    width:80% !important;
+    width:100% !important;
 }
 
 @media(min-width:$device_max) {
@@ -17,5 +16,30 @@ body.js-off-canvas-dialog-open {
         width:50% !important;;
     }
 }
-
 // ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-off-canvas ui-dialog-position-side ui-resizable
+
+button.trigger {
+    // background:white;
+}
+
+ul.contextual-links {
+    // background:white;
+    // display:block;
+}
+
+body.body-sidebar-first.js-off-canvas-dialog-open  {
+    @media(min-width:$device) {
+        .layout-content {
+            grid-column: span 12;
+            padding-right:3rem;
+            padding-left:3rem;
+        }
+        .layout-sidebar-first {
+            order: 1;
+            grid-column: span 12;
+            padding-right:3rem;
+            padding-left:3rem;
+        }
+    }
+    
+}

@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?f0frko');
-  src:  url('fonts/icomoon.eot?f0frko#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?f0frko') format('truetype'),
-    url('fonts/icomoon.woff?f0frko') format('woff'),
-    url('fonts/icomoon.svg?f0frko#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?sat9ra');
+  src:  url('fonts/icomoon.eot?sat9ra#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?sat9ra') format('truetype'),
+    url('fonts/icomoon.woff?sat9ra') format('woff'),
+    url('fonts/icomoon.svg?sat9ra#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -24,6 +25,78 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-dry-run-1:before {
+  content: "\e919";
+}
+.icon-dry-run-2:before {
+  content: "\e91a";
+}
+.icon-trial-run:before {
+  content: "\e91b";
+}
+.icon-lessons:before {
+  content: "\e918";
+}
+.icon-context:before {
+  content: "\e908";
+}
+.icon-data_analysis:before {
+  content: "\e909";
+}
+.icon-data_collection:before {
+  content: "\e90a";
+}
+.icon-data_quality_check:before {
+  content: "\e90b";
+}
+.icon-data_synthesis:before {
+  content: "\e90c";
+}
+.icon-dissemination_results:before {
+  content: "\e90d";
+}
+.icon-dry_run:before {
+  content: "\e90e";
+}
+.icon-dry_run_2:before {
+  content: "\e90f";
+}
+.icon-evaluation-approach:before {
+  content: "\e910";
+}
+.icon-gap_selection:before {
+  content: "\e911";
+}
+.icon-objective:before {
+  content: "\e912";
+}
+.icon-research_question:before {
+  content: "\e913";
+}
+.icon-scenario:before {
+  content: "\e914";
+}
+.icon-solution_selection:before {
+  content: "\e915";
+}
+.icon-trial_integration:before {
+  content: "\e916";
+}
+.icon-trial_run:before {
+  content: "\e917";
+}
+.icon-like:before {
+  content: "\e900";
+}
+.icon-siren:before {
+  content: "\e901";
+}
+.icon-preparation:before {
+  content: "\e902";
+}
+.icon-plus:before {
+  content: "\e903";
+}
 .icon-cog:before {
   content: "\f013";
 }
@@ -143,16 +216,4 @@
 }
 .icon-radio-unchecked:before {
   content: "\ea56";
-}
-.icon-like:before {
-  content: "\e900";
-}
-.icon-siren:before {
-  content: "\e901";
-}
-.icon-preparation:before {
-  content: "\e902";
-}
-.icon-plus:before {
-  content: "\e903";
 }
