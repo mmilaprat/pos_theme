@@ -32,11 +32,11 @@
 .breadcrumb {
     padding:0;
 }
-
-body.path-group , body.path-gt  {
+body.body-header-orange  {
     #block-reboot-breadcrumbs{
+        
         background:transparentize(#c17528,.5);
-        // background:#c17528;
+        
         color:#f0d6a6;
         a {
             color:#f0d6a6;

@@ -29,16 +29,22 @@ ul.contextual-links {
 
 body.body-sidebar-first.js-off-canvas-dialog-open  {
     @media(min-width:$device) {
+        main {
+            grid-template-columns:1fr;
+        }
         .layout-content {
-            grid-column: span 12;
-            padding-right:3rem;
-            padding-left:3rem;
+            // grid-column: span 12;
+            // padding-right:3rem;
+            // padding-left:3rem;
         }
         .layout-sidebar-first {
             order: 1;
-            grid-column: span 12;
-            padding-right:3rem;
-            padding-left:3rem;
+            // grid-column: span 12;
+            // padding-right:3rem;
+            // padding-left:3rem;
+        }
+        .left-content {
+            display:contents;
         }
     }
     

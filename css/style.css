@@ -2,9 +2,10 @@
   font-family: 'iconos';
   src: url("../fonts/fonts/icomoon.eot");
   src: url("../fonts/fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/fonts/icomoon.woff") format("woff"), url("../fonts/fonts/icomoon.ttf") format("truetype"), url("../fonts/fonts/icomoon.svg#iconosRegular") format("svg");
+  font-display: swap;
 }
 
-/* line 17, ../sass/_init.scss */
+/* line 19, ../sass/_init.scss */
 a:before,
 .block-header h2:before,
 .btn:before {
@@ -14,53 +15,53 @@ a:before,
   font-weight: normal;
 }
 
-/* line 26, ../sass/_init.scss */
+/* line 28, ../sass/_init.scss */
 .vertical-list .item:after {
   font-family: iconos;
 }
 
-/* line 37, ../sass/_init.scss */
+/* line 39, ../sass/_init.scss */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 43, ../sass/_init.scss */
+/* line 45, ../sass/_init.scss */
 body {
   font-family: 'open sans',sans-serif;
   width: 100%;
   line-height: 1.4;
 }
 
-/* line 48, ../sass/_init.scss */
+/* line 50, ../sass/_init.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 53, ../sass/_init.scss */
+/* line 55, ../sass/_init.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
 }
 
-/* line 57, ../sass/_init.scss */
+/* line 59, ../sass/_init.scss */
 h1 {
   font-size: 1.6em;
 }
 
-/* line 61, ../sass/_init.scss */
+/* line 63, ../sass/_init.scss */
 h2 {
   font-size: 1.3em;
 }
 
-/* line 67, ../sass/_init.scss */
+/* line 69, ../sass/_init.scss */
 p {
   margin: 0;
 }
 
-/* line 70, ../sass/_init.scss */
+/* line 72, ../sass/_init.scss */
 p + p {
   margin: 1em 0;
 }
@@ -112,43 +113,56 @@ body.path-all-trials-wide .block-system-main-block,
 body.path-all-trials-wide main {
   max-width: 100%;
 }
-@media (min-width: 992px) {
-  /* line 56, ../sass/layout/_layout.scss */
-  body.path-gt .block-system-main-block,
-  body.path-gt main,
-  body.path-all-trials-wide .block-system-main-block,
-  body.path-all-trials-wide main {
-    margin: 0 30px;
-  }
+
+/* line 72, ../sass/layout/_layout.scss */
+#main-content {
+  display: none;
+}
+
+/* line 76, ../sass/layout/_layout.scss */
+body.body-sidebar-left main {
+  display: grid;
+  grid-gap: 20px;
+}
+/* line 81, ../sass/layout/_layout.scss */
+body.body-sidebar-left .left-content {
+  display: contents;
+}
+/* line 84, ../sass/layout/_layout.scss */
+body.body-sidebar-left .layout-sidebar-top {
+  order: -1;
 }
 
 @media (min-width: 992px) {
-  /* line 81, ../sass/layout/_layout.scss */
-  #main-content {
-    display: none;
-  }
-
-  /* line 87, ../sass/layout/_layout.scss */
+  /* line 107, ../sass/layout/_layout.scss */
   body.body-sidebar-first .region-notification .views-field-nothing .field-content,
   body.body-sidebar-first main, body.body-sidebar-first .region-highlighted {
     max-width: 1220px;
   }
-  /* line 90, ../sass/layout/_layout.scss */
+  /* line 110, ../sass/layout/_layout.scss */
   body.body-sidebar-first main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     grid-template-columns: 210px 1fr;
     grid-gap: 30px;
   }
-  /* line 106, ../sass/layout/_layout.scss */
+  /* line 124, ../sass/layout/_layout.scss */
+  body.body-sidebar-first .left-content {
+    display: block;
+    order: -1;
+  }
+  /* line 134, ../sass/layout/_layout.scss */
   body.body-sidebar-first .layout-sidebar-first {
     order: -1;
   }
 
-  /* line 122, ../sass/layout/_layout.scss */
+  /* line 149, ../sass/layout/_layout.scss */
   body.path-pos .region-highlighted,
+  body.path-gt .region-highlighted {
+    max-width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  /* line 155, ../sass/layout/_layout.scss */
   body.path-pos main,
-  body.path-gt .region-highlighted,
   body.path-gt main {
     max-width: 95%;
   }
@@ -309,7 +323,6 @@ footer.node__meta {
 /* line 158, ../sass/components/_pages.scss */
 .region-footer {
   padding-top: 3em;
-  opacity: .75;
 }
 @media (min-width: 480px) {
   /* line 158, ../sass/components/_pages.scss */
@@ -373,30 +386,29 @@ h1.page-title a:hover {
   border-bottom: 2px solid white;
 }
 
-/* line 231, ../sass/components/_pages.scss */
-body.path-group h1.page-title,
-body.path-gt h1.page-title {
+/* line 233, ../sass/components/_pages.scss */
+body.body-header-orange h1.page-title {
   background-image: url(../images/header-trials.jpg);
 }
 
-/* line 238, ../sass/components/_pages.scss */
+/* line 240, ../sass/components/_pages.scss */
 #toolbar-administration {
   display: none;
 }
 @media (min-width: 992px) {
-  /* line 238, ../sass/components/_pages.scss */
+  /* line 240, ../sass/components/_pages.scss */
   #toolbar-administration {
     display: block;
   }
 }
 
-/* line 246, ../sass/components/_pages.scss */
+/* line 248, ../sass/components/_pages.scss */
 body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
   margin-left: 0px;
   margin-left: 0;
 }
 
-/* line 255, ../sass/components/_pages.scss */
+/* line 257, ../sass/components/_pages.scss */
 body.user-logged-in .logged-in-hide {
   display: none;
 }
@@ -432,7 +444,7 @@ body.path-frontpage .btn-helpdesk {
   padding-left: 2em;
   padding-left: 2.5em;
 }
-/* line 129, ../sass/_mixins.scss */
+/* line 137, ../sass/_mixins.scss */
 body.path-frontpage .btn-helpdesk:before {
   content: " ";
   width: 1em;
@@ -566,62 +578,55 @@ body.path-frontpage main .view {
   border-bottom-color: #e5e5e5;
 }
 
-/* line 2, ../sass/components/_blocks.scss */
-.region-highlighted {
-  display: flex;
-}
-/* line 5, ../sass/components/_blocks.scss */
-.region-highlighted > * {
-  padding: 1.5em 1.5em 1.5em 0;
-}
-/* line 12, ../sass/components/_blocks.scss */
-.region-highlighted > * {
-  padding-right: 1.5em;
-}
-
-/* line 20, ../sass/components/_blocks.scss */
+/* line 23, ../sass/components/_blocks.scss */
 #block-exposedformsolution-search-pagesolution-search-page .form-item-search-api-fulltext,
 #block-exposedformsolution-search-pagesolution-search-page .edit-actions {
   float: left;
 }
-/* line 24, ../sass/components/_blocks.scss */
+/* line 27, ../sass/components/_blocks.scss */
 #block-exposedformsolution-search-pagesolution-search-page #edit-actions {
   margin-left: 1em;
 }
-/* line 27, ../sass/components/_blocks.scss */
+/* line 30, ../sass/components/_blocks.scss */
 #block-exposedformsolution-search-pagesolution-search-page .form--inline {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* line 39, ../sass/components/_blocks.scss */
+/* line 42, ../sass/components/_blocks.scss */
 #edit-search-api-fulltext {
   max-width: 100%;
   width: 12em;
 }
 
-/* line 46, ../sass/components/_blocks.scss */
+/* line 49, ../sass/components/_blocks.scss */
+#block-exposedformsolution-search-pagesolutions,
 #block-exposedformsolution-search-pagesolution-search-page,
 #block-cmfunctiontaxonomytermname {
   font-size: 14px;
   color: #858585;
 }
-/* line 50, ../sass/components/_blocks.scss */
+/* line 53, ../sass/components/_blocks.scss */
+#block-exposedformsolution-search-pagesolutions .form-item,
+#block-exposedformsolution-search-pagesolutions .form-actions,
 #block-exposedformsolution-search-pagesolution-search-page .form-item,
 #block-exposedformsolution-search-pagesolution-search-page .form-actions,
 #block-cmfunctiontaxonomytermname .form-item,
 #block-cmfunctiontaxonomytermname .form-actions {
   margin: 0;
 }
-/* line 53, ../sass/components/_blocks.scss */
-#block-exposedformsolution-search-pagesolution-search-page input, #block-exposedformsolution-search-pagesolution-search-page select,
+/* line 56, ../sass/components/_blocks.scss */
+#block-exposedformsolution-search-pagesolutions input, #block-exposedformsolution-search-pagesolutions select,
+#block-exposedformsolution-search-pagesolution-search-page input,
+#block-exposedformsolution-search-pagesolution-search-page select,
 #block-cmfunctiontaxonomytermname input,
 #block-cmfunctiontaxonomytermname select {
   border: 1px solid #b3b3b3;
   border-radius: 6px;
   padding: 3px 8px;
 }
-/* line 58, ../sass/components/_blocks.scss */
+/* line 61, ../sass/components/_blocks.scss */
+#block-exposedformsolution-search-pagesolutions #edit-submit-solution-search-page,
 #block-exposedformsolution-search-pagesolution-search-page #edit-submit-solution-search-page,
 #block-cmfunctiontaxonomytermname #edit-submit-solution-search-page {
   background: #0f7c8c;
@@ -629,47 +634,47 @@ body.path-frontpage main .view {
   color: white;
 }
 
-/* line 67, ../sass/components/_blocks.scss */
+/* line 70, ../sass/components/_blocks.scss */
 #edit-search-api-fulltext {
   float: left;
 }
 
-/* line 75, ../sass/components/_blocks.scss */
+/* line 78, ../sass/components/_blocks.scss */
 #block-exposedformsolution-search-pagesolution-search-page .block-header {
   display: none;
 }
 
-/* line 83, ../sass/components/_blocks.scss */
+/* line 86, ../sass/components/_blocks.scss */
 #block-cmfunctiontaxonomytermname select {
   max-width: 100%;
 }
 
-/* line 91, ../sass/components/_blocks.scss */
+/* line 94, ../sass/components/_blocks.scss */
 #region-help {
   background: #a5d5d7;
   background: #bbe6e8;
   padding: 1.5em 0;
 }
 
-/* line 100, ../sass/components/_blocks.scss */
+/* line 103, ../sass/components/_blocks.scss */
 #region-help .block {
   background: #e1f4f5;
 }
-/* line 106, ../sass/components/_blocks.scss */
+/* line 109, ../sass/components/_blocks.scss */
 #region-help #block-helpdesk,
 #region-help #block-views-block-help-button-block-1,
 #region-help #block-testhelp,
 #region-help #block-helpsample {
   background: transparent;
 }
-/* line 111, ../sass/components/_blocks.scss */
+/* line 114, ../sass/components/_blocks.scss */
 #region-help .btn-helpdesk {
   position: relative;
   position: relative;
   padding-left: 2em;
   padding-left: 2.5em;
 }
-/* line 129, ../sass/_mixins.scss */
+/* line 137, ../sass/_mixins.scss */
 #region-help .btn-helpdesk:before {
   content: " ";
   width: 1em;
@@ -682,7 +687,7 @@ body.path-frontpage main .view {
   top: 7px;
   left: 7px;
 }
-/* line 117, ../sass/components/_blocks.scss */
+/* line 120, ../sass/components/_blocks.scss */
 #region-help .btn-helpdesk:before {
   background-image: url(../images/icons/conversation.svg);
   width: 1.5em;
@@ -691,7 +696,7 @@ body.path-frontpage main .view {
   left: 10px;
 }
 
-/* line 130, ../sass/components/_blocks.scss */
+/* line 133, ../sass/components/_blocks.scss */
 #block-helpdesk,
 #block-views-block-help-button-block-1,
 #block-testhelp,
@@ -701,7 +706,7 @@ body.path-frontpage main .view {
   padding: 0;
 }
 
-/* line 141, ../sass/components/_blocks.scss */
+/* line 144, ../sass/components/_blocks.scss */
 #block-reboot-account-menu .view-user-info a,
 #block-reboot-account-menu .item-list,
 #block-reboot-account-menu .menu a,
@@ -713,23 +718,29 @@ body.path-frontpage main .view {
   padding: 7px 8px;
 }
 
-/* line 148, ../sass/components/_blocks.scss */
+/* line 151, ../sass/components/_blocks.scss */
 #user-menu {
   position: absolute;
   top: 0;
-  right: 30px;
+  right: 85px;
   font-size: .8125em;
   color: #0f7c8c;
 }
-/* line 158, ../sass/components/_blocks.scss */
+@media (min-width: 992px) {
+  /* line 151, ../sass/components/_blocks.scss */
+  #user-menu {
+    right: 65px;
+  }
+}
+/* line 164, ../sass/components/_blocks.scss */
 #user-menu h2 {
   display: none;
 }
-/* line 161, ../sass/components/_blocks.scss */
+/* line 167, ../sass/components/_blocks.scss */
 #user-menu .region {
   display: flex;
 }
-/* line 168, ../sass/components/_blocks.scss */
+/* line 174, ../sass/components/_blocks.scss */
 #user-menu .view-user-info .user-name ul,
 #user-menu .view-user-info .item-list ul {
   margin: 0;
@@ -737,7 +748,7 @@ body.path-frontpage main .view {
   list-style-type: none;
   display: flex;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 #user-menu .view-user-info .user-name ul li,
 #user-menu .view-user-info .item-list ul li {
   /* A simple method to get navigation links to appear in one line. */
@@ -746,41 +757,41 @@ body.path-frontpage main .view {
   margin: 0;
   list-style-type: none;
 }
-/* line 171, ../sass/components/_blocks.scss */
+/* line 177, ../sass/components/_blocks.scss */
 #user-menu .view-user-info .user-name ul:before,
 #user-menu .view-user-info .item-list ul:before {
   content: "[";
 }
-/* line 174, ../sass/components/_blocks.scss */
+/* line 180, ../sass/components/_blocks.scss */
 #user-menu .view-user-info .user-name ul:after,
 #user-menu .view-user-info .item-list ul:after {
   content: "]";
 }
-/* line 179, ../sass/components/_blocks.scss */
+/* line 185, ../sass/components/_blocks.scss */
 #user-menu .view-user-info .user-name ul li:not(:last-of-type),
 #user-menu .view-user-info .item-list ul li:not(:last-of-type) {
   padding-right: 5px;
 }
-/* line 187, ../sass/components/_blocks.scss */
+/* line 193, ../sass/components/_blocks.scss */
 #user-menu .view-user-info .user-name a {
   text-decoration: none;
 }
-/* line 189, ../sass/components/_blocks.scss */
+/* line 195, ../sass/components/_blocks.scss */
 #user-menu .view-user-info .user-name a:before {
   content: "\e971";
 }
-/* line 194, ../sass/components/_blocks.scss */
+/* line 200, ../sass/components/_blocks.scss */
 #user-menu .view-user-info .views-row {
   display: flex;
 }
-/* line 206, ../sass/components/_blocks.scss */
+/* line 212, ../sass/components/_blocks.scss */
 #user-menu .menu {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 #user-menu .menu li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -788,11 +799,11 @@ body.path-frontpage main .view {
   margin: 0;
   list-style-type: none;
 }
-/* line 215, ../sass/components/_blocks.scss */
+/* line 221, ../sass/components/_blocks.scss */
 #user-menu .contextual {
   right: -30px;
 }
-/* line 219, ../sass/components/_blocks.scss */
+/* line 225, ../sass/components/_blocks.scss */
 #user-menu .help {
   display: inline-block;
   width: 30px;
@@ -806,7 +817,7 @@ body.path-frontpage main .view {
   width: 34px;
   height: 34px;
 }
-/* line 50, ../sass/_mixins.scss */
+/* line 58, ../sass/_mixins.scss */
 #user-menu .help:before {
   opacity: 1;
   text-indent: 0%;
@@ -825,7 +836,7 @@ body.path-frontpage main .view {
   padding-top: 0px;
   text-align: center;
 }
-/* line 227, ../sass/components/_blocks.scss */
+/* line 233, ../sass/components/_blocks.scss */
 #user-menu .help::before {
   background-image: url(../images/icons/help2.svg);
   width: 34px;
@@ -833,11 +844,11 @@ body.path-frontpage main .view {
   top: -3px;
   left: 0px;
 }
-/* line 240, ../sass/components/_blocks.scss */
+/* line 246, ../sass/components/_blocks.scss */
 #user-menu .help:hover::before {
   background-image: url(../images/icons/help3.svg);
 }
-/* line 248, ../sass/components/_blocks.scss */
+/* line 254, ../sass/components/_blocks.scss */
 #user-menu .help.active::before {
   background-image: url(../images/icons/help4.svg);
 }
@@ -866,7 +877,7 @@ body.path-frontpage main .view {
   }
 }
 */
-/* line 289, ../sass/components/_blocks.scss */
+/* line 295, ../sass/components/_blocks.scss */
 #btn-help-2 {
   width: 2em;
   height: 2em;
@@ -876,19 +887,19 @@ body.path-frontpage main .view {
   background-size: cover;
 }
 
-/* line 298, ../sass/components/_blocks.scss */
+/* line 304, ../sass/components/_blocks.scss */
 #edit-userid {
   width: 9em;
 }
 
-/* line 304, ../sass/components/_blocks.scss */
+/* line 310, ../sass/components/_blocks.scss */
 .block-devel-switch-user .links {
   margin: 0;
   padding: 0;
   list-style-type: none;
   padding-bottom: 2em;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 .block-devel-switch-user .links li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -896,13 +907,13 @@ body.path-frontpage main .view {
   margin: 0;
   list-style-type: none;
 }
-/* line 306, ../sass/components/_blocks.scss */
+/* line 312, ../sass/components/_blocks.scss */
 .block-devel-switch-user .links a {
   text-decoration: none;
   display: block;
   padding: 2px 0;
 }
-/* line 312, ../sass/components/_blocks.scss */
+/* line 318, ../sass/components/_blocks.scss */
 .block-devel-switch-user .links li:not(:last-of-type) {
   border-bottom: 1px solid #cccccc;
 }
@@ -918,7 +929,7 @@ body.path-frontpage main .view {
   color: #858585;
   background: #e5e5e5;
 }
-/* line 75, ../sass/_mixins.scss */
+/* line 83, ../sass/_mixins.scss */
 .region-notification:after {
   content: "";
   display: table;
@@ -949,13 +960,13 @@ body.path-frontpage main .view {
   min-height: 30px;
 }
 
-/* line 1, ../sass/components/_navigation.scss */
+/* line 1, ../sass/navigation/_navigation.scss */
 .menu {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 .menu li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -964,11 +975,11 @@ body.path-frontpage main .view {
   list-style-type: none;
 }
 
-/* line 11, ../sass/components/_navigation.scss */
+/* line 11, ../sass/navigation/_navigation.scss */
 .region-primary-menu .menu--main .menu li {
   line-height: 1em;
 }
-/* line 14, ../sass/components/_navigation.scss */
+/* line 14, ../sass/navigation/_navigation.scss */
 .region-primary-menu .menu--main .menu a {
   display: block;
   padding: 5px 11px;
@@ -978,27 +989,27 @@ body.path-frontpage main .view {
   font-size: .875em;
   font-weight: 600;
 }
-/* line 46, ../sass/components/_navigation.scss */
+/* line 46, ../sass/navigation/_navigation.scss */
 .region-primary-menu .menu--main > .menu > li.menu-item--active-trail > a {
   background: #0f7c8c;
   background: #a5d5d7;
 }
 
 @media (min-width: 992px) {
-  /* line 71, ../sass/components/_navigation.scss */
+  /* line 71, ../sass/navigation/_navigation.scss */
   .menu--main > .menu {
     display: flex;
     flex-flow: row wrap;
   }
-  /* line 92, ../sass/components/_navigation.scss */
+  /* line 92, ../sass/navigation/_navigation.scss */
   .menu--main > .menu .menu {
     display: none;
   }
-  /* line 99, ../sass/components/_navigation.scss */
+  /* line 99, ../sass/navigation/_navigation.scss */
   .menu--main > .menu > li {
     position: relative;
   }
-  /* line 101, ../sass/components/_navigation.scss */
+  /* line 101, ../sass/navigation/_navigation.scss */
   .menu--main > .menu > li .menu {
     position: absolute;
     top: 26px;
@@ -1008,36 +1019,36 @@ body.path-frontpage main .view {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     background: #fafafa;
   }
-  /* line 111, ../sass/components/_navigation.scss */
+  /* line 111, ../sass/navigation/_navigation.scss */
   .menu--main > .menu > li .menu li a {
     padding: 7px;
     text-transform: none;
   }
-  /* line 117, ../sass/components/_navigation.scss */
+  /* line 117, ../sass/navigation/_navigation.scss */
   .menu--main > .menu > li .menu li:not(:last-of-type) {
     border-bottom: 1px solid #e5e5e5;
   }
-  /* line 122, ../sass/components/_navigation.scss */
+  /* line 122, ../sass/navigation/_navigation.scss */
   .menu--main > .menu > li:hover .menu {
     display: block;
   }
 }
-/* line 132, ../sass/components/_navigation.scss */
+/* line 132, ../sass/navigation/_navigation.scss */
 .region-secondary-menu {
   font-size: .875em;
 }
-/* line 134, ../sass/components/_navigation.scss */
+/* line 134, ../sass/navigation/_navigation.scss */
 .region-secondary-menu .menu {
   display: flex;
 }
-/* line 136, ../sass/components/_navigation.scss */
+/* line 136, ../sass/navigation/_navigation.scss */
 .region-secondary-menu .menu a {
   color: #464646;
   display: block;
   padding: 5px 10px;
 }
 
-/* line 1, ../sass/components/_navigation-second.scss */
+/* line 1, ../sass/navigation/_navigation-second.scss */
 .region-menu-second {
   font-size: .875em;
   padding: 0;
@@ -1046,39 +1057,39 @@ body.path-frontpage main .view {
   background: linear-gradient(to bottom, transparent, #a5d5d7);
   background: #c7f0f2;
 }
-/* line 10, ../sass/components/_navigation-second.scss */
+/* line 10, ../sass/navigation/_navigation-second.scss */
 .region-menu-second .menu {
   justify-content: flex-end;
 }
-/* line 17, ../sass/components/_navigation-second.scss */
+/* line 17, ../sass/navigation/_navigation-second.scss */
 .region-menu-second .menu a {
   color: #28497b;
   padding: 7px 15px;
   display: block;
 }
-/* line 26, ../sass/components/_navigation-second.scss */
+/* line 26, ../sass/navigation/_navigation-second.scss */
 .region-menu-second .menu a.is-active {
   background: #0f7c8c;
   color: white;
 }
-/* line 32, ../sass/components/_navigation-second.scss */
+/* line 32, ../sass/navigation/_navigation-second.scss */
 .region-menu-second .menu .menu a {
   padding-left: 2em;
   text-transform: none;
   font-size: 1em;
   font-weight: normal;
 }
-/* line 41, ../sass/components/_navigation-second.scss */
+/* line 41, ../sass/navigation/_navigation-second.scss */
 .region-menu-second li.menu-item--active-trail a {
   background: #c7f0f2;
 }
-/* line 44, ../sass/components/_navigation-second.scss */
+/* line 44, ../sass/navigation/_navigation-second.scss */
 .region-menu-second li.menu-item--active-trail a.is-active {
   color: white;
   background: #0f7c8c;
 }
 
-/* line 4, ../sass/components/_navigation-tools.scss */
+/* line 4, ../sass/navigation/_navigation-tools.scss */
 .view.orange-buttons .views-field a,
 .view.orange-buttons .menu a,
 #block-reboot-tools .views-field a,
@@ -1097,7 +1108,7 @@ body.path-frontpage main .view {
   text-decoration: none;
   display: block;
 }
-/* line 97, ../sass/_mixins.scss */
+/* line 105, ../sass/_mixins.scss */
 .view.orange-buttons .views-field a:hover,
 .view.orange-buttons .menu a:hover,
 #block-reboot-tools .views-field a:hover,
@@ -1107,27 +1118,27 @@ body.path-frontpage main .view {
   border-color: #28497b;
 }
 
-/* line 12, ../sass/components/_navigation-tools.scss */
+/* line 12, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-group-links-block-1 .views-row {
   display: flex;
 }
-/* line 14, ../sass/components/_navigation-tools.scss */
+/* line 14, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-group-links-block-1 .views-row > * {
   margin-right: 10px;
 }
 
-/* line 21, ../sass/components/_navigation-tools.scss */
+/* line 21, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-/* line 23, ../sass/components/_navigation-tools.scss */
+/* line 23, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation hr {
   margin: 1em;
   border-top: 2px dotted #858585;
 }
-/* line 28, ../sass/components/_navigation-tools.scss */
+/* line 28, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation h3 {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
@@ -1136,7 +1147,7 @@ body.path-frontpage main .view {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -1144,7 +1155,7 @@ body.path-frontpage main .view {
   margin: 0;
   list-style-type: none;
 }
-/* line 46, ../sass/components/_navigation-tools.scss */
+/* line 46, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a {
   font-size: .9375em;
   display: inline-block;
@@ -1164,13 +1175,13 @@ body.path-frontpage main .view {
   padding-left: 43px;
   position: relative;
 }
-/* line 118, ../sass/_mixins.scss */
+/* line 126, ../sass/_mixins.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a:hover {
   background: #28497b;
   color: white;
   border-color: #28497b;
 }
-/* line 56, ../sass/components/_navigation-tools.scss */
+/* line 56, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.active {
   background: #333333;
   background: linear-gradient(to bottom, #0f7c8c, #28497b);
@@ -1178,18 +1189,18 @@ body.path-frontpage main .view {
   color: white;
   border-color: black;
 }
-/* line 63, ../sass/components/_navigation-tools.scss */
+/* line 63, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.passed {
   background: linear-gradient(to bottom, #a5d5d7, #87c1cc);
   border-color: #28497b;
   background: #a5d5d7;
 }
-/* line 68, ../sass/components/_navigation-tools.scss */
+/* line 68, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a:hover {
   background: #28497b;
   color: white;
 }
-/* line 75, ../sass/components/_navigation-tools.scss */
+/* line 75, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a:before {
   content: "\e911";
   font-size: 35px;
@@ -1200,91 +1211,91 @@ body.path-frontpage main .view {
   height: 35px;
   display: block;
 }
-/* line 89, ../sass/components/_navigation-tools.scss */
+/* line 85, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-gaps:before {
   content: "\e911";
 }
-/* line 92, ../sass/components/_navigation-tools.scss */
+/* line 88, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-objectives:before {
   content: "\e912";
 }
-/* line 95, ../sass/components/_navigation-tools.scss */
+/* line 91, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-questions:before {
   content: "\e913";
 }
-/* line 98, ../sass/components/_navigation-tools.scss */
+/* line 94, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-evaluation:before {
   content: "\e90a";
 }
-/* line 101, ../sass/components/_navigation-tools.scss */
+/* line 97, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-scenario:before {
   content: "\e914";
 }
-/* line 104, ../sass/components/_navigation-tools.scss */
+/* line 100, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-solution:before {
   content: "\e915";
 }
-/* line 107, ../sass/components/_navigation-tools.scss */
+/* line 103, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-test:before {
   content: "\e901";
 }
-/* line 110, ../sass/components/_navigation-tools.scss */
+/* line 106, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-discussion:before {
   content: "\e904";
 }
-/* line 113, ../sass/components/_navigation-tools.scss */
+/* line 109, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-lesson:before {
   content: "\e905";
 }
-/* line 116, ../sass/components/_navigation-tools.scss */
+/* line 112, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-analysis:before {
   content: "\e910";
 }
-/* line 119, ../sass/components/_navigation-tools.scss */
+/* line 115, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-execution:before {
   content: "\e916";
 }
-/* line 122, ../sass/components/_navigation-tools.scss */
+/* line 118, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-evaluation-phase:before {
   content: "\ea10";
 }
-/* line 125, ../sass/components/_navigation-tools.scss */
+/* line 121, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-dry-one:before {
   content: "\e90e";
   content: "\e919";
 }
-/* line 131, ../sass/components/_navigation-tools.scss */
+/* line 127, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-dry-two:before {
   content: "\e90f";
   content: "\e91a";
 }
-/* line 137, ../sass/components/_navigation-tools.scss */
+/* line 133, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-run:before {
   content: "\e917";
   content: "\e91b";
 }
-/* line 142, ../sass/components/_navigation-tools.scss */
+/* line 138, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-data-quality:before {
   content: "\e90b";
 }
-/* line 146, ../sass/components/_navigation-tools.scss */
+/* line 142, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-data-analysis:before {
   content: "\e909";
 }
-/* line 150, ../sass/components/_navigation-tools.scss */
+/* line 146, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-data-synthesis:before {
   content: "\e90c";
 }
-/* line 154, ../sass/components/_navigation-tools.scss */
+/* line 150, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-dissemination:before {
   content: "\e90d";
 }
-/* line 158, ../sass/components/_navigation-tools.scss */
+/* line 154, ../sass/navigation/_navigation-tools.scss */
 #block-views-block-trial-group-navigation-trial-navigation .trial-navigation a.trial-lessons:before {
   content: "\e918";
 }
 
-/* line 174, ../sass/components/_navigation-tools.scss */
+/* line 170, ../sass/navigation/_navigation-tools.scss */
 .view-solution-group-navigation .views-row a,
 #block-views-block-trial-group-view-trial-navigation .views-row a {
   display: inline-block;
@@ -1295,17 +1306,29 @@ body.path-frontpage main .view {
   border-radius: 6px;
   margin-bottom: 10px;
   text-decoration: none;
+  border-color: #fdc455;
+  font-weight: 600;
+  background: white;
   display: block;
 }
-/* line 118, ../sass/_mixins.scss */
+/* line 126, ../sass/_mixins.scss */
 .view-solution-group-navigation .views-row a:hover,
 #block-views-block-trial-group-view-trial-navigation .views-row a:hover {
   background: #28497b;
   color: white;
   border-color: #28497b;
 }
+/* line 176, ../sass/navigation/_navigation-tools.scss */
+.view-solution-group-navigation .views-row a.active,
+#block-views-block-trial-group-view-trial-navigation .views-row a.active {
+  background: #333333;
+  background: linear-gradient(to bottom, #0f7c8c, #28497b);
+  background: #28497b;
+  color: white;
+  border-color: black;
+}
 
-/* line 185, ../sass/components/_navigation-tools.scss */
+/* line 191, ../sass/navigation/_navigation-tools.scss */
 .view.orange-buttons .views-field a,
 .view.orange-buttons .menu a,
 .view.grey-buttons .views-field a,
@@ -1322,7 +1345,7 @@ body.path-frontpage main .view {
   text-decoration: none;
   display: block;
 }
-/* line 118, ../sass/_mixins.scss */
+/* line 126, ../sass/_mixins.scss */
 .view.orange-buttons .views-field a:hover,
 .view.orange-buttons .menu a:hover,
 .view.grey-buttons .views-field a:hover,
@@ -1333,7 +1356,7 @@ body.path-frontpage main .view {
   color: white;
   border-color: #28497b;
 }
-/* line 191, ../sass/components/_navigation-tools.scss */
+/* line 194, ../sass/navigation/_navigation-tools.scss */
 .view.orange-buttons .views-field a.active,
 .view.orange-buttons .menu a.active,
 .view.grey-buttons .views-field a.active,
@@ -1345,12 +1368,12 @@ body.path-frontpage main .view {
   border-color: black;
 }
 
-/* line 205, ../sass/components/_navigation-tools.scss */
+/* line 208, ../sass/navigation/_navigation-tools.scss */
 #block-reboot-tools .menu .add:before {
   content: "\e903";
 }
 
-/* line 213, ../sass/components/_navigation-tools.scss */
+/* line 216, ../sass/navigation/_navigation-tools.scss */
 .btn {
   display: inline-block;
   background: white;
@@ -1365,93 +1388,129 @@ body.path-frontpage main .view {
   margin-bottom: 10px;
   text-decoration: none;
 }
-/* line 97, ../sass/_mixins.scss */
+/* line 105, ../sass/_mixins.scss */
 .btn:hover {
   background: #28497b;
   color: white;
   border-color: #28497b;
 }
-/* line 215, ../sass/components/_navigation-tools.scss */
+/* line 218, ../sass/navigation/_navigation-tools.scss */
 .btn.btn-help:before {
   content: "\ea09";
 }
 
-/* line 222, ../sass/components/_navigation-tools.scss */
+/* line 225, ../sass/navigation/_navigation-tools.scss */
 #btn-help {
   line-height: 1em;
 }
 
-/* line 230, ../sass/components/_navigation-tools.scss */
+/* line 233, ../sass/navigation/_navigation-tools.scss */
 .add:before {
   content: "\e903";
 }
 
-/* line 235, ../sass/components/_navigation-tools.scss */
+/* line 238, ../sass/navigation/_navigation-tools.scss */
 .view-solution-group-navigation .views-field a {
   display: block;
 }
 
-/* line 242, ../sass/components/_navigation-tools.scss */
+/* line 245, ../sass/navigation/_navigation-tools.scss */
 .menu .trials:before {
   content: "\e901";
 }
 
-/* line 249, ../sass/components/_navigation-tools.scss */
+/* line 252, ../sass/navigation/_navigation-tools.scss */
 #block-trialobjectivesinstructions {
   padding: 1.5em;
   border: 1px solid #cccccc;
   border-radius: 6px;
   background: white;
 }
-/* line 257, ../sass/components/_navigation-tools.scss */
+/* line 260, ../sass/navigation/_navigation-tools.scss */
 #block-trialobjectivesinstructions hr {
   display: none;
 }
-/* line 260, ../sass/components/_navigation-tools.scss */
+/* line 263, ../sass/navigation/_navigation-tools.scss */
 #block-trialobjectivesinstructions .block-header h2 {
   padding: 0;
   margin: 0;
   font-size: 1em;
 }
-/* line 266, ../sass/components/_navigation-tools.scss */
+/* line 269, ../sass/navigation/_navigation-tools.scss */
 #block-trialobjectivesinstructions .block-header h2:before {
   content: "\ea09";
 }
 
-/* line 2, ../sass/components/_navigation-main.scss */
+/* line 2, ../sass/navigation/_navigation-main.scss */
 #nav-toggle {
   font-size: 2em;
   text-decoration: none;
   color: #464646;
   position: fixed;
-  top: 30px;
+  position: absolute;
+  top: 5px;
   right: 30px;
   z-index: 2;
+  width: 22px;
   background: white;
-  border: 1px solid #cccccc;
-  width: 1.5em;
-  text-align: center;
+  line-height: 1em;
 }
-/* line 15, ../sass/components/_navigation-main.scss */
+/* line 17, ../sass/navigation/_navigation-main.scss */
 #nav-toggle.active {
   background: #28497b;
   color: white;
   border-color: #28497b;
 }
 @media (min-width: 992px) {
-  /* line 2, ../sass/components/_navigation-main.scss */
+  /* line 2, ../sass/navigation/_navigation-main.scss */
   #nav-toggle {
     display: none;
   }
 }
+/* line 25, ../sass/navigation/_navigation-main.scss */
+#nav-toggle svg {
+  fill: #28497b;
+  display: block;
+}
+
+/* line 31, ../sass/navigation/_navigation-main.scss */
+#lang-toggle {
+  right: 90px;
+  position: absolute;
+  top: 5px;
+  right: 60px;
+  width: 22px;
+  height: 22px;
+  background: white;
+}
+@media (min-width: 992px) {
+  /* line 31, ../sass/navigation/_navigation-main.scss */
+  #lang-toggle {
+    display: block;
+  }
+}
+/* line 42, ../sass/navigation/_navigation-main.scss */
+#lang-toggle svg {
+  fill: #858585;
+  display: block;
+}
+@media (min-width: 992px) {
+  /* line 31, ../sass/navigation/_navigation-main.scss */
+  #lang-toggle {
+    right: 30px;
+  }
+}
+/* line 50, ../sass/navigation/_navigation-main.scss */
+#lang-toggle.active svg {
+  fill: #28497b;
+}
 
 @media (max-width: 991px) {
-  /* line 28, ../sass/components/_navigation-main.scss */
+  /* line 65, ../sass/navigation/_navigation-main.scss */
   #block-reboot-main-menu {
     opacity: 0;
     overflow: hidden;
     margin: 0;
-    position: fixed;
     z-index: 999;
     background: white;
     width: 100%;
@@ -1463,23 +1522,89 @@ body.path-frontpage main .view {
     width: 1px;
     margin-left: -200px;
   }
-  /* line 46, ../sass/components/_navigation-main.scss */
+  /* line 83, ../sass/navigation/_navigation-main.scss */
   #block-reboot-main-menu.active {
     opacity: 1;
     margin: 0 -1em;
     height: auto;
     width: 100%;
   }
-  /* line 57, ../sass/components/_navigation-main.scss */
+  /* line 94, ../sass/navigation/_navigation-main.scss */
   #block-reboot-main-menu > .menu > li > .menu a {
     font-weight: normal;
     padding-left: 2em;
   }
 }
-/* line 69, ../sass/components/_navigation-main.scss */
+/* line 106, ../sass/navigation/_navigation-main.scss */
 #block-reboot-main-menu .menu a:hover {
   background: #0f7c8c;
   color: white;
+}
+
+/* line 2, ../sass/navigation/_navigation-lang.scss */
+#block-languageswitcher h2 {
+  display: none;
+}
+/* line 5, ../sass/navigation/_navigation-lang.scss */
+#block-languageswitcher .links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 21, ../sass/_mixins.scss */
+#block-languageswitcher .links li {
+  /* A simple method to get navigation links to appear in one line. */
+  padding: 0;
+  /* LTR */
+  margin: 0;
+  list-style-type: none;
+}
+/* line 9, ../sass/navigation/_navigation-lang.scss */
+#block-languageswitcher .links a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 30px;
+  background: url(../images/flags/en.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: #464646;
+  font-size: .8125em;
+  text-transform: uppercase;
+}
+/* line 24, ../sass/navigation/_navigation-lang.scss */
+#block-languageswitcher .links .de a {
+  background-image: url(../images/flags/de.png);
+}
+/* line 25, ../sass/navigation/_navigation-lang.scss */
+#block-languageswitcher .links .fr a {
+  background-image: url(../images/flags/fr.png);
+}
+/* line 26, ../sass/navigation/_navigation-lang.scss */
+#block-languageswitcher .links .nl a {
+  background-image: url(../images/flags/nl.png);
+}
+/* line 27, ../sass/navigation/_navigation-lang.scss */
+#block-languageswitcher .links .pl a {
+  background-image: url(../images/flags/pl.png);
+}
+/* line 28, ../sass/navigation/_navigation-lang.scss */
+#block-languageswitcher .links .it a {
+  background-image: url(../images/flags/it.png);
+}
+@media (min-width: 992px) {
+  /* line 1, ../sass/navigation/_navigation-lang.scss */
+  #block-languageswitcher {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 6px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
 }
 
 /* line 1, ../sass/views/_views.scss */
@@ -1577,96 +1702,31 @@ body.path-frontpage main .view {
 }
 
 /* line 150, ../sass/views/_views.scss */
-.view.view-flip-card {
-  /* This container is needed to position the front and back side */
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  /* Position the front and back side */
-  /* Style the front side (fallback if image is missing) */
-  /* Style the back side */
-}
-/* line 151, ../sass/views/_views.scss */
-.view.view-flip-card .svg-icon {
-  max-width: 100%;
-  height: auto;
-}
-/* line 156, ../sass/views/_views.scss */
-.view.view-flip-card h4 {
-  border: 1px solid #0f7c8c;
-  background: white;
-  color: #0f7c8c;
-  margin: 0;
-  padding: 5px 5px;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-}
-/* line 170, ../sass/views/_views.scss */
-.view.view-flip-card .flip-card {
-  background-color: transparent;
-  height: 252px;
-  color: white;
-}
-/* line 183, ../sass/views/_views.scss */
-.view.view-flip-card .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-/* line 194, ../sass/views/_views.scss */
-.view.view-flip-card .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-/* line 199, ../sass/views/_views.scss */
-.view.view-flip-card .flip-card-front, .view.view-flip-card .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-/* line 207, ../sass/views/_views.scss */
-.view.view-flip-card .flip-card-front {
-  background-color: #bbb;
-  background-color: #fafafa;
-  color: black;
-}
-/* line 216, ../sass/views/_views.scss */
-.view.view-flip-card .flip-card-back {
-  background-color: #0f7c8c;
-  color: white;
-  padding: 0 1em;
-  transform: rotateY(180deg);
-}
-/* line 221, ../sass/views/_views.scss */
-.view.view-flip-card .flip-card-back p {
-  position: absolute;
-  top: 1.5em;
-  left: 0;
-  padding: 1em;
-}
-
-/* line 234, ../sass/views/_views.scss */
-.view.view-flip-card-perspective .flip-card {
-  perspective: 1000px;
-  /* Remove this if you don't want the 3D effect */
-}
-
-/* line 242, ../sass/views/_views.scss */
-.view-cols-3 .view-content,
-.view.front-banner .view-content {
+.view-grid-small > .view-content,
+.view-grid > .view-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 30px;
 }
-/* line 249, ../sass/views/_views.scss */
+
+/* line 156, ../sass/views/_views.scss */
+.view-grid-small > .view-content {
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+
+/* line 163, ../sass/views/_views.scss */
+.view-cols-3 > .view-content,
+.view.front-banner > .view-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 30px;
+}
+/* line 170, ../sass/views/_views.scss */
 .view-cols-3 .views-row,
 .view.front-banner .views-row {
   position: relative;
 }
-/* line 253, ../sass/views/_views.scss */
+/* line 174, ../sass/views/_views.scss */
 .view-cols-3.view-display-id-block_4 .view-content,
 .view.front-banner.view-display-id-block_4 .view-content {
   display: block;
@@ -1674,19 +1734,19 @@ body.path-frontpage main .view {
   margin: 0 auto;
 }
 
-/* line 263, ../sass/views/_views.scss */
+/* line 184, ../sass/views/_views.scss */
 .view-front-solutions .views-field-body {
   font-size: .875em;
 }
 
-/* line 275, ../sass/views/_views.scss */
+/* line 196, ../sass/views/_views.scss */
 .view-group-content .item-list ul,
 .view-custom-group .item-list ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 .view-group-content .item-list ul li,
 .view-custom-group .item-list ul li {
   /* A simple method to get navigation links to appear in one line. */
@@ -1695,12 +1755,12 @@ body.path-frontpage main .view {
   margin: 0;
   list-style-type: none;
 }
-/* line 279, ../sass/views/_views.scss */
+/* line 200, ../sass/views/_views.scss */
 .view-group-content .item-list ul li:not(:last-of-type) a,
 .view-custom-group .item-list ul li:not(:last-of-type) a {
   border-bottom: 1px solid #cccccc;
 }
-/* line 285, ../sass/views/_views.scss */
+/* line 206, ../sass/views/_views.scss */
 .view-group-content .item-list ul li a,
 .view-custom-group .item-list ul li a {
   padding: 5px 5px;
@@ -1775,7 +1835,7 @@ view-slideshow {
   left: 0;
   opacity: .4;
 }
-/* line 50, ../sass/_mixins.scss */
+/* line 58, ../sass/_mixins.scss */
 .slideshow-multiple .views_slideshow_controls_text_pause:before,
 .slideshow-multiple .views_slideshow_controls_text_next:before,
 .slideshow-multiple .views_slideshow_controls_text_previous:before {
@@ -2261,7 +2321,7 @@ aside.layout-sidebar-first .item-list__checkbox {
   padding: 0;
   list-style-type: none;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 aside.layout-sidebar-first .item-list__checkbox li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -2447,7 +2507,7 @@ aside.layout-sidebar-first input[type=checkbox] {
   color: #fdc455;
   padding-top: 5px;
 }
-/* line 50, ../sass/_mixins.scss */
+/* line 58, ../sass/_mixins.scss */
 .view.wide .view-member .field-content:before {
   opacity: 1;
   text-indent: 0%;
@@ -2577,6 +2637,214 @@ aside.layout-sidebar-first input[type=checkbox] {
   text-decoration: none;
 }
 
+/* line 4, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card {
+  /* This container is needed to position the front and back side */
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* Position the front and back side */
+  /* Style the front side (fallback if image is missing) */
+  /* Style the back side */
+  /* COLORS */
+}
+/* line 5, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card .svg-icon {
+  max-width: 100%;
+  height: auto;
+}
+/* line 10, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card h4 {
+  border: 1px solid #28497b;
+  background: white;
+  color: #0f7c8c;
+  margin: 0;
+  padding: 7px 10px 12px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.9375em;
+  font-weight: 600;
+}
+/* line 32, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card .flip-card {
+  background-color: transparent;
+  height: 230px;
+  color: white;
+}
+/* line 45, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+/* line 55, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/* line 60, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card .flip-card-front, .view.view-flip-card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+/* line 72, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card .flip-card-front {
+  color: black;
+}
+/* line 86, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card .flip-card-back {
+  background-color: #0f7c8c;
+  color: white;
+  padding: 0 1em;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: .8125em;
+  overflow: hidden;
+}
+/* line 96, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card .flip-card-back p {
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  padding: 1em;
+}
+/* line 104, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+/* line 121, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-black .flip-card-front, .view.view-flip-card.view-flip-card-blue .flip-card-front, .view.view-flip-card.view-flip-card-orange .flip-card-front, .view.view-flip-card.view-flip-card-color .flip-card-front {
+  color: black;
+}
+/* line 127, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-black .flip-card-front:before, .view.view-flip-card.view-flip-card-blue .flip-card-front:before, .view.view-flip-card.view-flip-card-orange .flip-card-front:before, .view.view-flip-card.view-flip-card-color .flip-card-front:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(15, 124, 140, 0.4), rgba(15, 124, 140, 0.7));
+}
+/* line 133, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-black h4, .view.view-flip-card.view-flip-card-blue h4, .view.view-flip-card.view-flip-card-orange h4, .view.view-flip-card.view-flip-card-color h4 {
+  color: white;
+  border: none;
+  background: rgba(15, 124, 140, 0.3);
+  font-size: .8125em;
+  text-shadow: 2px 2px 4px #28497b;
+}
+/* line 147, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-blue .flip-card-front:before {
+  background: linear-gradient(to bottom, rgba(40, 73, 123, 0.5), rgba(40, 73, 123, 0.7));
+}
+/* line 152, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-blue .flip-card-back {
+  background-color: #28497b;
+}
+/* line 155, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-blue h4 {
+  background: rgba(40, 73, 123, 0.3);
+}
+/* line 163, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-orange .flip-card-front:before {
+  background: linear-gradient(to bottom, rgba(164, 111, 58, 0.4), rgba(164, 111, 58, 0.8));
+}
+/* line 168, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-orange .flip-card-back {
+  background-color: #a46f3a;
+}
+/* line 171, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-orange h4 {
+  background: rgba(164, 111, 58, 0.3);
+}
+/* line 179, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-black .flip-card-front:before {
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.7));
+}
+/* line 184, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-black .flip-card-back {
+  background-color: #333333;
+}
+/* line 187, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-black h4 {
+  background: rgba(51, 51, 51, 0.3);
+}
+/* line 197, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-border .flip-card {
+  border: 2px solid #0f7c8c;
+}
+/* line 208, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-border h4 {
+  border: none;
+  background: #0f7c8c;
+  color: white;
+  font-size: .8125em;
+  text-shadow: 2px 2px 4px #28497b;
+}
+/* line 234, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-flip-card-border .flip-card-front .flip-card-front {
+  border: 2px solid red;
+}
+/* line 246, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card.view-grid-small .flip-card {
+  height: 150px;
+}
+
+/* line 259, ../sass/views/_views-flip-card.scss */
+.view.view-flip-card-perspective .flip-card {
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* line 17, ../sass/views/_views-filters.scss */
+.region-highlighted {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 20, ../sass/views/_views-filters.scss */
+.region-highlighted .block {
+  padding: 1rem;
+}
+/* line 24, ../sass/views/_views-filters.scss */
+.region-highlighted .form-item-query {
+  float: none;
+  margin: 0;
+}
+
+/* line 30, ../sass/views/_views-filters.scss */
+#views-exposed-form-solutions-explorer-solutions > div {
+  display: flex;
+}
+/* line 32, ../sass/views/_views-filters.scss */
+#views-exposed-form-solutions-explorer-solutions > div .form-type-select {
+  margin: 0 1.5rem;
+}
+/* line 35, ../sass/views/_views-filters.scss */
+#views-exposed-form-solutions-explorer-solutions > div .form-item, #views-exposed-form-solutions-explorer-solutions > div .form-actions {
+  margin: 0 .5rem;
+}
+/* line 38, ../sass/views/_views-filters.scss */
+#views-exposed-form-solutions-explorer-solutions > div .js-form-type-textfiel {
+  margin-left: 0;
+}
+
+/* line 44, ../sass/views/_views-filters.scss */
+.region-highlighted {
+  background: #f2f2f2;
+}
+
 /* line 6, ../sass/components/_nodes.scss */
 .graphic-trial {
   height: 480px;
@@ -2702,7 +2970,7 @@ aside.layout-sidebar-first input[type=checkbox] {
   padding: 0;
   list-style-type: none;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 .graphic-trial .graphic-circle-wrap ul li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -2789,7 +3057,7 @@ aside.layout-sidebar-first input[type=checkbox] {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0 0px;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 .graphic-trial-evaluation .col-2 ul li,
 .graphic-trial-execution .col-2 ul li {
   /* A simple method to get navigation links to appear in one line. */
@@ -3081,7 +3349,7 @@ form .field-multiple-table .field-multiple-drag .tabledrag-handle {
   background-size: 40px 40px;
   background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px);
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 .graphic-gannt li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -3201,7 +3469,7 @@ form .field-multiple-table .field-multiple-drag .tabledrag-handle {
   padding: 0;
   list-style-type: none;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 #graphic-trial ul li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -3428,7 +3696,7 @@ form .field-multiple-table .field-multiple-drag .tabledrag-handle {
   list-style-type: none;
   margin: 1.5em 0;
 }
-/* line 13, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 .horizontal-breadcrumb li {
   /* A simple method to get navigation links to appear in one line. */
   padding: 0;
@@ -3436,7 +3704,7 @@ form .field-multiple-table .field-multiple-drag .tabledrag-handle {
   margin: 0;
   list-style-type: none;
 }
-/* line 75, ../sass/_mixins.scss */
+/* line 83, ../sass/_mixins.scss */
 .horizontal-breadcrumb:after {
   content: "";
   display: table;
@@ -3538,7 +3806,7 @@ form .field-multiple-table .field-multiple-drag .tabledrag-handle {
   top: -40px;
   right: 20px;
 }
-/* line 129, ../sass/_mixins.scss */
+/* line 137, ../sass/_mixins.scss */
 #btn-help:before {
   content: " ";
   width: 1em;
@@ -3623,13 +3891,13 @@ form .field-multiple-table .field-multiple-drag .tabledrag-handle {
   padding: 0;
 }
 
-/* line 37, ../sass/components/_breadcrumb.scss */
-body.path-group #block-reboot-breadcrumbs, body.path-gt #block-reboot-breadcrumbs {
+/* line 36, ../sass/components/_breadcrumb.scss */
+body.body-header-orange #block-reboot-breadcrumbs {
   background: rgba(193, 117, 40, 0.5);
   color: #f0d6a6;
 }
 /* line 41, ../sass/components/_breadcrumb.scss */
-body.path-group #block-reboot-breadcrumbs a, body.path-gt #block-reboot-breadcrumbs a {
+body.body-header-orange #block-reboot-breadcrumbs a {
   color: #f0d6a6;
 }
 
@@ -3850,17 +4118,16 @@ ul.links-translations span.es:before {
 }
 @media (min-width: 992px) {
   /* line 32, ../sass/components/_glossary.scss */
-  body.body-sidebar-first.js-off-canvas-dialog-open .layout-content {
-    grid-column: span 12;
-    padding-right: 3rem;
-    padding-left: 3rem;
+  body.body-sidebar-first.js-off-canvas-dialog-open main {
+    grid-template-columns: 1fr;
   }
-  /* line 37, ../sass/components/_glossary.scss */
+  /* line 40, ../sass/components/_glossary.scss */
   body.body-sidebar-first.js-off-canvas-dialog-open .layout-sidebar-first {
     order: 1;
-    grid-column: span 12;
-    padding-right: 3rem;
-    padding-left: 3rem;
+  }
+  /* line 46, ../sass/components/_glossary.scss */
+  body.body-sidebar-first.js-off-canvas-dialog-open .left-content {
+    display: contents;
   }
 }
 
@@ -3924,7 +4191,7 @@ ul.links-translations span.es:before {
     text-align: center;
     color: #28497b;
   }
-  /* line 13, ../sass/_mixins.scss */
+  /* line 21, ../sass/_mixins.scss */
   .block-forms-steps > ol li, .block-forms-steps > ul li,
   .block-forms-steps .item-list > ol li,
   .block-forms-steps .item-list > ul li {
@@ -3945,12 +4212,14 @@ ul.links-translations span.es:before {
   .block-forms-steps > ol li, .block-forms-steps > ul li,
   .block-forms-steps .item-list > ol li,
   .block-forms-steps .item-list > ul li {
-    padding: 10px 20px;
-    margin-right: 20px;
+    padding: 7px 10px;
+    margin-right: 25px;
     background: gray;
     border-radius: 6px 0 0 6px;
-    background: linear-gradient(to top, #808080, #999999);
-    background: linear-gradient(to top, #a7d9c9, #c5f0e2);
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #fdc455;
+    font-weight: 600;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -3960,64 +4229,36 @@ ul.links-translations span.es:before {
   .block-forms-steps > ol li:not(:last-of-type):before, .block-forms-steps > ul li:not(:last-of-type):before,
   .block-forms-steps .item-list > ol li:not(:last-of-type):before,
   .block-forms-steps .item-list > ul li:not(:last-of-type):before {
-    content: "";
-    width: 20px;
-    height: 100%;
-    background-image: url(../images/icons/next_big.svg);
-    background-size: 20px 100%;
-    background-repeat: no-repeat;
+    font-family: iconos;
+    font-weight: normal;
     position: absolute;
-    top: 0;
-    right: -20px;
+    top: 6px;
+    right: -18px;
+    content: "\ea42";
+    color: #87c1cc;
   }
-  /* line 120, ../sass/components/_form-steps.scss */
-  .block-forms-steps > ol li.active, .block-forms-steps > ol li.start, .block-forms-steps > ul li.active, .block-forms-steps > ul li.start,
+  /* line 119, ../sass/components/_form-steps.scss */
+  .block-forms-steps > ol li.active, .block-forms-steps > ul li.active,
   .block-forms-steps .item-list > ol li.active,
-  .block-forms-steps .item-list > ol li.start,
-  .block-forms-steps .item-list > ul li.active,
-  .block-forms-steps .item-list > ul li.start {
-    background: linear-gradient(to top, #a5d5d7, #c7f0f2);
-    background: linear-gradient(to top, #28497b, #0f7c8c);
-    color: #464646;
+  .block-forms-steps .item-list > ul li.active {
+    background: #28497b;
     color: white;
+    border-color: #28497b;
   }
-  /* line 125, ../sass/components/_form-steps.scss */
-  .block-forms-steps > ol li.active:not(:last-of-type):before, .block-forms-steps > ol li.start:not(:last-of-type):before, .block-forms-steps > ul li.active:not(:last-of-type):before, .block-forms-steps > ul li.start:not(:last-of-type):before,
-  .block-forms-steps .item-list > ol li.active:not(:last-of-type):before,
-  .block-forms-steps .item-list > ol li.start:not(:last-of-type):before,
-  .block-forms-steps .item-list > ul li.active:not(:last-of-type):before,
-  .block-forms-steps .item-list > ul li.start:not(:last-of-type):before {
-    background-image: url(../images/icons/next_big_active.svg);
-  }
-  /* line 129, ../sass/components/_form-steps.scss */
-  .block-forms-steps > ol li.end, .block-forms-steps > ul li.end,
-  .block-forms-steps .item-list > ol li.end,
-  .block-forms-steps .item-list > ul li.end {
-    background: linear-gradient(to top, #a5d5d7, #28497b);
-    color: #464646;
-  }
-  /* line 135, ../sass/components/_form-steps.scss */
-  .block-forms-steps > ol li.end, .block-forms-steps > ol li.start, .block-forms-steps > ul li.end, .block-forms-steps > ul li.start,
-  .block-forms-steps .item-list > ol li.end,
-  .block-forms-steps .item-list > ol li.start,
-  .block-forms-steps .item-list > ul li.end,
-  .block-forms-steps .item-list > ul li.start {
-    font-weight: 600;
-  }
-  /* line 138, ../sass/components/_form-steps.scss */
+  /* line 131, ../sass/components/_form-steps.scss */
   .block-forms-steps > ol li:last-of-type, .block-forms-steps > ul li:last-of-type,
   .block-forms-steps .item-list > ol li:last-of-type,
   .block-forms-steps .item-list > ul li:last-of-type {
     border-radius: 6px;
   }
-  /* line 143, ../sass/components/_form-steps.scss */
+  /* line 136, ../sass/components/_form-steps.scss */
   .block-forms-steps > ol + .workflow, .block-forms-steps > ul + .workflow,
   .block-forms-steps .item-list > ol + .workflow,
   .block-forms-steps .item-list > ul + .workflow {
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
-  /* line 152, ../sass/components/_form-steps.scss */
+  /* line 145, ../sass/components/_form-steps.scss */
   .block-forms-steps > ol + .workflow li:not(.start):after, .block-forms-steps > ul + .workflow li:not(.start):after,
   .block-forms-steps .item-list > ol + .workflow li:not(.start):after,
   .block-forms-steps .item-list > ul + .workflow li:not(.start):after {
@@ -4029,7 +4270,7 @@ ul.links-translations span.es:before {
     top: -20px;
     left: 0;
   }
-  /* line 161, ../sass/components/_form-steps.scss */
+  /* line 154, ../sass/components/_form-steps.scss */
   .block-forms-steps > ol + .workflow li:not(.start):not(.end), .block-forms-steps > ul + .workflow li:not(.start):not(.end),
   .block-forms-steps .item-list > ol + .workflow li:not(.start):not(.end),
   .block-forms-steps .item-list > ul + .workflow li:not(.start):not(.end) {

@@ -7,9 +7,11 @@ src: url('../fonts/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
      url('../fonts/fonts/icomoon.woff') format('woff'),
      url('../fonts/fonts/icomoon.ttf') format('truetype'),
      url('../fonts/fonts/icomoon.svg#iconosRegular') format('svg');
+
+     font-display: swap;
  
  }
- 
+
 a,
 .block-header h2,
 

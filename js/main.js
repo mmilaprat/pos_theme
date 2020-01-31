@@ -5,7 +5,13 @@
         // var $body = $('#block-trialobjectivesinstructions');
         // $($body).hide();
 
-        // $('#region-help').hide();
+        $('#block-languageswitcher').hide();
+        $('#lang-toggle', context).css("cursor","pointer").click(function() {
+          $(this).toggleClass('active');
+          $('#block-languageswitcher').toggleClass('active').toggle('slow');
+         
+         
+        });
         
         $('#nav-toggle', context).css("cursor","pointer").click(function() {
           $(this).toggleClass('active');

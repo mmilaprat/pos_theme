@@ -12,6 +12,7 @@ libraries-override:
           css/components/menu.css: false 
 regions:
   user_menu: 'User menu'
+  sidebar_top: 'Top sidebar'
   sidebar_first: 'Left sidebar'
   sidebar_second: 'Right sidebar'
   front_slide: 'Front SlideShow'

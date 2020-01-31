@@ -82,14 +82,14 @@
         text-decoration:none;
       }
       li {
-          padding:10px 20px;
-          margin-right:20px;
+          padding:7px 10px;
+          margin-right:25px;
           background:$gris_50;
           border-radius:6px 0 0 6px;
-          background:linear-gradient(to top, $gris_50,$gris_60);
-          
-          background:linear-gradient(to top, #a7d9c9, #c5f0e2);
-
+          border-radius:6px;
+         background:white;
+         border:1px solid $bk_3_1;
+         font-weight: 600;
           // color:white;
           position:relative;
           display:flex;
@@ -98,43 +98,36 @@
           
           
           &:not(:last-of-type):before {
-              content:"";
-              width: 20px;
-        height: 100%;
-          // background:red;
-  
-          background-image:url(../images/icons/next_big.svg);
-          background-size:20px 100%;
-          background-repeat:no-repeat;
-          position:absolute;
-          top:0;
-          right:-20px;
+        //       content:"";
+        //       width: 10px;
+        // height: 100%;
           
-              
-              // transform: translateY(-50%);
-              // top: calc(50% - 30px);
-  //   transform: translateY(-50%);
   
+        //   background-image:url(../images/workflow/next_big.svg);
+        //   background-size:10px 100%;
+        //   background-repeat:no-repeat;
+        font-family:iconos;
+        font-weight:normal;
+          position:absolute;
+          top:6px;
+          right:-18px;
+        content:"\ea42";
+        color:$bk_2_1;
+          
+       
           }
-          &.active ,
-          &.start {
-              background:linear-gradient(to top, $bk_2, $bk_2_2);
-              background:linear-gradient(to top, $bk,$bk_1);
-              color:$general;
+          &.active    {
+              
+              background:$bk;
+              // background:$bk_2;
+              // color:$general;
               color:white;
+              border-color:$bk;
               &:not(:last-of-type):before {
-                background-image:url(../images/icons/next_big_active.svg);
+                // background-image:url(../images/workflow/next_big_active.svg);
               }
           }
-          &.end {
-              background:linear-gradient(to top, $bk_2, $bk);
-              color:$general;
-          
-          }
-          &.end,
-          &.start {
-              font-weight:600;
-          }
+         
           &:last-of-type {
             border-radius:6px;
           }

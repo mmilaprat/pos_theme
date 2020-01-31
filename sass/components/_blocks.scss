@@ -1,16 +1,19 @@
 
+
+
+
 .region-highlighted {
 
   // padding-bottom:1.5em;
   & > * {
-    padding:1.5em 1.5em 1.5em 0;
+    // padding:1.5em 1.5em 1.5em 0;
   }
   
   // background:$bk_3;
-  display:flex;
+  
   
   & > * {
-    padding-right:1.5em;  
+    // padding-right:1.5em;  
   }
 }
 
@@ -41,7 +44,7 @@
     // background:red;
     width:12em;
 }
-
+#block-exposedformsolution-search-pagesolutions,
 #block-exposedformsolution-search-pagesolution-search-page,
 #block-cmfunctiontaxonomytermname {
   font-size:14px;
@@ -149,9 +152,12 @@ color:$claro;
   // background:$gris_90;
   position:absolute;
   top:0;
-  right:30px;
+  right:85px;
   font-size:.8125em;
   color:$bk_1;
+  @media(min-width:$device) {
+    right:65px;
+  }
   a {
   
   }

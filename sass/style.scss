@@ -8,16 +8,21 @@
 @import "components/front";
 @import "components/blocks";
 @import "components/blocks-notification";
-@import "components/navigation";
-@import "components/navigation-second";
-@import "components/navigation-tools";
-@import "components/navigation-main";
+
+@import "navigation/navigation";
+@import "navigation/navigation-second";
+@import "navigation/navigation-tools";
+@import "navigation/navigation-main";
+@import "navigation/navigation-lang";
 
 @import "views/views";
 @import "views/views-table";
 @import "views/views-slideshow";
 @import "views/views-trial";
 @import "views/views-trials";
+@import "views/views-flip-card";
+@import "views/views-filters";
+
 
 @import "components/node";
 @import "components/nodes";
